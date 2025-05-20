@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse ve Accordion Örneği</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-5">
+  <div class="container">
+    <h2 class="mb-4">Sıkça Sorulan Sorular</h2>
+
+    <!-- Accordion -->
+    <div class="accordion" id="sssAccordion"> <!-- Accordion bileşenini oluşturduk--> <!-- id ile bir referans verdik-->
+      <div class="accordion-item"> <!-- Accordion bileşeninin her bir elemanını oluşturduk-->
+        <h2 class="accordion-header" id="q1"> <!-- Her bir elemanın başlığını oluşturduk-->
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#a1"> <!-- Butonun accordion bileşenini tetikleyeceğini belirtir--> <!-- Hangi elementi açacağını/gizleyeceğini gösterir-->
+            <!-- data-bs-target ile hangi elementi açacağını/gizleyeceğini gösterir-->
+            Bootstrap nedir?
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#sssAccordion"> <!-- collapse sınıfı ile gizli olan bir div oluşturduk--> <!-- data-bs-parent ile hangi accordion bileşenine ait olduğunu belirttik-->
+          <div class="accordion-body"> <!-- Accordion bileşeninin içeriğini oluşturduk-->
+            Bootstrap, mobil öncelikli ve hazır bileşenler sunan CSS framework’üdür.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a2">
+            Collapse ne işe yarar?
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+          <div class="accordion-body">
+            Collapse, içeriği açma-kapama animasyonlarıyla göstermemizi sağlar.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Collapse -->
+    <button class="btn btn-outline-primary mb-3" data-bs-toggle="collapse" data-bs-target="#extraInfo"> <!--Butonun collapse bileşenini tetikleyeceğini belirtir--> <!--Hangi elementi açacağını/gizleyeceğini gösterir-->
+      Ek Bilgi Panelini Göster / Gizle
+    </button>
+
+    <div class="collapse" id="extraInfo"> <!-- collapse sınıfı ile gizli olan bir div oluşturduk-->
+      <div class="card card-body">
+        Bootstrap ile butonlar, formlar, grid sistemi ve daha fazlası çok kolay yönetilir. Özellikle responsive (mobil uyumlu) siteler yapmak için çok kullanışlıdır.
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

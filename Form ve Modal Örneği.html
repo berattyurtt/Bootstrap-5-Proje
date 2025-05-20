@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form ve Navbar Örneği</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Modal Açma Butonu -->
+  <div class="container mt-5"> <!-- Boşluk ve ortalama için container sınıfı kullanılır. -->
+  <h2 class="text-center mb-4">Giriş Yap</h2> <!-- Başlık ve alt boşluk için mb-4 sınıfı kullanılır. -->
+  <div class="text-center"> <!-- Ortalamak için text-center sınıfı kullanılır. -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#girisModal"> <!-- Bootstrap modal açma butonu -->
+      Giriş Yap
+    </button>
+  </div>
+<!-- Modal -->
+<div class="modal fade" id="girisModal" tabindex="-1" aria-labelledby="girisModalLabel" aria-hidden="true"> <!--Modal penceresinin efektini(fade) açar, tabindex ve ID Modalin eşsiz id'si butonla bağlantı kurar ve tabindex erişilebilirlik için gerekli. -->
+  <div class="modal-dialog"> <!-- Modal penceresinin dış kutusu -->
+    <div class="modal-content"> <!-- Modal içeriğinin tamamı -->
+      <div class="modal-header"> <!-- Modal başlığı ve kapatma butonu -->
+        <h5 class="modal-title" id="girisModalLabel">Giriş Formu</h5> <!-- Modal başlığı -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button> <!-- Kapatma butonu -->
+      </div>
+      <div class="modal-body"> <!-- Modal içeriği -->
+        <!-- Form -->
+        <form>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">E-posta adresi</label> <!-- Form Label etiketi biçimlendirir. -->
+            <input type="email" class="form-control" id="emailInput" placeholder="E-postanı gir"> <!-- Form kontrolü için form-control sınıfı kullanılır. -->
+          </div>
+          <div class="mb-3">
+            <label for="sifreInput" class="form-label">Şifre</label>
+            <input type="password" class="form-control" id="sifreInput" placeholder="Şifreni gir">
+          </div>
+          <div class="form-check mb-3"> 
+            <input type="checkbox" class="form-check-input" id="beniHatirla"> <!-- Checkbox için form-check-input sınıfı kullanılır. -->
+            <label class="form-check-label" for="beniHatirla">Beni hatırla</label> <!-- Checkbox için form-check-label sınıfı kullanılır. -->
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer"> <!-- Modal alt kısmı -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button> <!-- Kapatma butonu -->
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>  
+<!-- Modal'ın çalışması için gereken JS dosyası -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>      
+</html>

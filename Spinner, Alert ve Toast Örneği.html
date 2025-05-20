@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner, Alert ve Toast Örneği</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+    <!--Başlık-->
+    <h2 class="mb-4">İşlem Simülasyonu</h2>
+    <!--İşlem başlat butonu-->
+    <button id="startProcess" class="btn btn-primary ">İşleme Başla</button>
+    <!--Spinner-->
+    <div id="loadingSpinner" class="spinner-border text-primary mt-3 d-none" role="status">
+        <span class="visually-hidden">Yükleniyor...</span>
+    </div>
+    <!--Alert-->
+    <div id="successAlert" class="alert alert-success mt-3 d-none" role="alert">
+        İşlem başarıyla tamamlandı!
+    </div>
+    <!--Toast Container-->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="successToast" class="toast" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Bildirim</strong>
+                <small>Şimdi</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                İşlem başarıyla tamamlandı!
+            </div>
+        </div>
+    </div>
+    <!--Bootstrap ve JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const startBtn = document.getElementById('startProcess');
+        const spinner = document.getElementById('loadingSpinner');
+        const alertBox = document.getElementById('successAlert');
+        const toastEl = document.getElementById('successToast');
+        const toast = new bootstrap.Toast(toastEl);
+    
+        startBtn.addEventListener('click', () => {
+          // Spinner'ı göster
+          spinner.classList.remove('d-none');
+          alertBox.classList.add('d-none');
+    
+          // 2 saniye sonra işlem tamamlandı mesajları
+        setTimeout(() => {
+        spinner.classList.add('d-none');     // Spinner'ı gizle
+        alertBox.classList.remove('d-none'); // Alert'i göster
+        toast.show();                        // Toast'ı göster
+      }, 2000);
+    });
+    </script>
+</body>
+</html>

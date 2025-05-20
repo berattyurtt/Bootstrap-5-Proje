@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Kişisel Web Sayfası</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hakkimda">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projeler">Projeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iletisim">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar bitiş-->
+
+    <!--Hero alanı başlangıç-->
+    <section class="bg-dark text-center py-2 text-white">
+        <div class="container">
+            <h1 class="display-4">Merhabalar</h1>
+            <p class="lead">Bu site Bootstrap 5 kullanılarak kişisel web sitesi şablonu olarak tasarlanmıştır.</p>
+        </div>
+    </section>
+</header>
+    <!--Hero alanı bitiş-->
+
+    <!--Hakkımda bölümü başlangıç-->
+    <section id="hakkimda" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="text-center mb-4">Hakkımda</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend, metus quis consequat interdum, neque neque rhoncus mi, blandit congue metus magna eget nulla. Vestibulum id risus lorem. In imperdiet, ex sit amet condimentum consectetur, quam dolor congue mi, a venenatis ex erat ac mauris. Etiam dapibus sodales elit, vitae vestibulum lectus mollis sit amet. Ut pretium, nisl sit amet feugiat sodales, orci leo accumsan eros, in consequat urna nisi sodales ligula. Sed id velit purus. Proin iaculis semper lobortis. Cras pharetra gravida accumsan. Pellentesque laoreet magna eu sapien hendrerit, ac eleifend ligula accumsan. Nunc lacus quam, blandit vitae felis in, maximus molestie erat. Etiam sed bibendum mi, nec tempor tellus. Vestibulum ac aliquam eros, eu dignissim elit. Nulla fermentum ullamcorper imperdiet. Morbi at finibus enim. Vivamus non ipsum velit. Nunc nec ipsum eget augue pharetra viverra.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/300" alt="Profil Resmi" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Projeler bölümü başlangıç-->
+    <section id="projeler" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projelerim</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proje 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proje 1</h5>
+                            <p class="card-text">Bu proje hakkında kısa bir açıklama.</p>
+                            <a href="#" class="btn btn-secondary">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proje 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Proje 2</h5>
+                            <p class="card-text">Bu proje hakkında kısa bir açıklama.</p>
+                            <a href="#" class="btn btn-secondary">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Proje 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proje 3</h5>
+                            <p class="card-text">Bu proje hakkında kısa bir açıklama.</p>
+                            <a href="#" class="btn btn-secondary">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--İletişim bölümü başlangıç-->
+    <section id="iletisim" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">İletişim</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="adSoyad" class="form-label">Ad Soyad</label>
+                    <input type="text" class="form-control" id="adSoyad" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="konu" class="form-label">Konu</label>
+                    <input type="text" class="form-control" id="konu" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mesaj" class="form-label">Mesaj</label>
+                    <textarea class="form-control" id="mesaj" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!--Footer kısmı başlangıç-->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+          <p class="mb-1">&copy; 2025. Tüm hakları saklıdır.</p>
+          <p class="mb-0">
+            <a href="mailto:berat@example.com" class="text-white text-decoration-underline">example@example.com</a>
+          </p>
+          <div class="mt-3">
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+    </footer>      
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

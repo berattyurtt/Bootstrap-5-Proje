@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Örneği</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        background-color: #212529;
+        color: #f8f9fa;
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+    }
+    .carousel-item img {
+        width: 50%; /* Resim genişliği */
+        height: auto; /* Yükseklik */
+    }
+  </style>
+</head>
+<body>
+    <div id="resimCarousel" class="carousel slide" data-bs-ride="carousel"> <!-- Carousel sınıfı ile kaydırıcı oluşturma -->
+        <div class="carousel-inner"> <!-- Carousel tüm slaytları içerir -->
+          <div class="carousel-item active"> <!-- İlk slayt aktif olarak başlar -->
+            <img src="https://picsum.photos/300?1" class="d-block mx-auto" alt="Resim 1">
+          </div>
+          <div class="carousel-item"> <!-- Carousel içindeki her bir slayt -->
+            <img src="https://picsum.photos/300?2" class="d-block mx-auto" alt="Resim 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/300?3" class="d-block mx-auto" alt="Resim 3">
+          </div>
+        </div>
+      
+        <!-- Sol/Sağ Oklar -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#resimCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#resimCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        // Bootstrap Carousel için gerekli JavaScript
+        var myCarousel = document.querySelector('#resimCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 2000, // Slayt geçiş süresi (ms)
+          wrap: true // Son slayttan sonra başa döner
+        })
+      </script>
+</body>
+</html>
